@@ -1,48 +1,34 @@
+// Introduction to Arrays
 
-console.log("Hello World!");
-console.log("Hello World!");
-console.log("Hello World!");
+let superheros = ["Superman", "Batman","Joker", "Spiderman","Wonder women"];
 
-// This is how we comment a multi line of codes 
+console.log("Hero 1 is", superheros[0]);
+console.log("Hero 5 is", superheros[4]);
 
-// Statements: JavaScript code is composed of statements that perform specific actions. Each statement typically ends with a semicolon (;), although it is not always required.
+superheros[2] = "Doctor Strange";
 
-// Comments: You can add comments in JavaScript to provide explanations or make notes within the code. There are two types of comments: single-line comments, starting with //, and multi-line comments, enclosed between /* and */.
+// Push Method
+superheros.push("Deadpool");
+console.log(superheros);
 
-// Case sensitivity: JavaScript is case-sensitive, meaning that uppercase and lowercase letters are treated differently. For example, "variable" and "Variable" would be considered as two separate variables.
+// pop method (removing last value inthe array)
+superheros.pop();
+console.log(superheros);
 
-// Whitespace: JavaScript ignores spaces, tabs, and line breaks (collectively called whitespace) that are not necessary for code execution. However, whitespace can enhance code readability.
-
-// Blocks: Code blocks in JavaScript are enclosed in curly braces ({}) and are used to group statements together. Blocks are often used in control structures like loops and conditional statements.
-
-// Variables// String 
-let name = "John"
-console.log("This is the name of the user:", name);
-
-var myfavoriteGame = "Animal Crossing";
-console.log("This is my favorite game:", myfavoriteGame);
-
-if (true) {
-    let myfavoriteGame = "cafe latte";
-    var mySecondFavDrink = "Tea";
-
+// Array Iteration
+for (let i = 0; i < 4; i++) {
+    console.log("Hero", i+1, "is", superheros[i]);
 }
 
-// Number 
-let age = 25;
-console.log("The type of age:", typeof age);
+// foreach method
+superheros.forEach(function(hero) {
+    console.log("hero is", hero);
+});
 
-// Boolean - True or false
-let isStudent = false;
-let isTeacher = true;
-console.log("The type of isStudent:", typeof isStudent);
-console.log("The type of isTeacher:", typeof isTeacher);
+// Array Methods
+console.log("Array length is", superheros.length);
+console.log("Index of Wonder Woman is", superheros.indexOf("Wonder Woman"));
+console.log("Joined Array:", superheros.join("-"));
 
-
-// Null- Intentional absense of data
-let girlFriend = null;
-console.log("The type of girlfriend:", typeof girlFriend);
-
-let city;
-console.log("The type of city", typeof city);
-console.log("The value of city", city);
+let slicedArray = superheros.slice(8,1);
+console.log(slicedArray);
